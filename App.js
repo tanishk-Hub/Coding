@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Navbar from "./Navbar";
+import { useState } from "react";
 function App() {
+  const [c, setc] = useState("");
+  function Appp() {
+    setc(document.getElementById("text").value.toUpperCase());
+  }
+  function Reset() {
+    document.getElementById("text").value.delete();
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="STYLE">
+        <h1 className="PT">
+          <b>Upper Case</b>
+        </h1>
+        <Navbar></Navbar>
+        <br></br>
+        <form>
+          <textarea
+            placeholder="Enter your text here"
+            rows={10}
+            cols={17}
+            id="text"
+          ></textarea>
+        </form>
+        <button type="button" onClick={Appp} className="Ex" id="Class">
+          Convert to Upper Case
+        </button>
+        <br></br>
+        <br></br>
+
+        <h3>
+          Output:<br></br>
+          {c}
+        </h3>
+        <h4 id="tdk"> </h4>
+        <a href="/">Click here</a>
+        <h4>
+          <b> (You can get more information by clicking on above button)</b>
+        </h4>
+
+        <br></br>
       </header>
+      <footer>
+        <button id="ff" onClick={Reset}>
+          RESET
+        </button>
+      </footer>
     </div>
   );
 }
-
 export default App;
