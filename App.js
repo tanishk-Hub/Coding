@@ -6,7 +6,6 @@ function App() {
   function Appp() {
     setc(document.getElementById("text").value.toUpperCase());
   }
-  
   return (
     <div className="App">
       <header className="STYLE">
@@ -41,9 +40,7 @@ function App() {
 
         <br></br>
       </header>
-      <footer>
-       
-      </footer>
+      <footer></footer>
     </div>
   );
 }
