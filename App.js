@@ -6,9 +6,7 @@ function App() {
   function Appp() {
     setc(document.getElementById("text").value.toUpperCase());
   }
-  function Reset() {
-    document.getElementById("text").value.delete();
-  }
+  
   return (
     <div className="App">
       <header className="STYLE">
@@ -44,9 +42,7 @@ function App() {
         <br></br>
       </header>
       <footer>
-        <button id="ff" onClick={Reset}>
-          RESET
-        </button>
+       
       </footer>
     </div>
   );
